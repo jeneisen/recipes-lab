@@ -5,8 +5,8 @@
 
 <ul>
   <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
-  <% end %>
+    <li><%= link_to ingredient.name, ingredient %></li>
+     <% end %>
 </ul>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

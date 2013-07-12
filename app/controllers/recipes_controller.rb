@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
 
   def create
     #raise params
-    @recipe = Recipe.find(params[:recipe_id])
+    @recipe = Recipe.create(params[:recipe_id])
     @recipe.name = params[:name]
     @recipe.add_ingredients_by_name(params[:ingredient])
 

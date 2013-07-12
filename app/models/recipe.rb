@@ -4,6 +4,8 @@ class Recipe < ActiveRecord::Base
   has_many :recipe_ingredients
   has_many :ingredients, :through => :recipe_ingredients
 
+  validates_presence_of :name
+
   def add_ingredients_by_name(ingredients)
     ingredients.collect(&:downcase).collect(&:strip).reject(&:blank?).uniq.each do |ingredient_name|
       add_ingredient_by_name(ingredient_name)
