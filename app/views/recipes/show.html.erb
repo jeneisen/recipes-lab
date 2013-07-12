@@ -1,1 +1,13 @@
 <!-- A view that shows you all the ingredients in a recipe. -->
+
+<p id="notice"><%= notice %></p>
+<h1><%=@recipe.name%></h1>
+
+<ul>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <li><%= ingredient.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

@@ -12,22 +12,8 @@ If you get clever, you can have 1 text box behave both ways, capable of adding a
 
 -->
 
-<form>
-  <p>
-    <label>Recipe Name</label>
-    <input type="text">
-  </p>
+<h1>Wahoo - a new recipe!</h1>
 
-  <p>
-    <label>Ingredients</label>
-    <ul>
-      <li><input></li>
-      <li><input></li>
-      <li><input></li>
-      <li><input></li>
-      <li><input></li>
-    </ul>
-  </p>
+<%= render 'form' %>
 
-  <p><input type="submit" /></p>
-</form>
+<%= link_to 'Back', recipes_path %>

@@ -1,0 +1,13 @@
+<h1>Recipe list</h1>
+
+<ul>
+<%@recipes.each do |recipe|%>
+  <%= render "shared/recipe", :recipe =>recipe %>
+  <%end%>
+
+<li class="btn btn-success btn-large pull-right add_new">
+  <span class="fui-new-16"></span>
+
+<%=link_to "create a new recipe!", new_recipe_path%>
+</li>
+</ul>

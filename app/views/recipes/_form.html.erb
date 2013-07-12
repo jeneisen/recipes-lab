@@ -1,0 +1,20 @@
+<form action="/recipes" method="POST">
+  <p>
+    <label>Recipe Name</label>
+    <input type="text" name="name">
+  </p>
+
+  <p>
+    <label>Ingredients:</label>
+    <ul style="list-style:none;">
+      <li><input type="hidden" name="recipe_id" value=<%=@recipe.id%>></li>
+      <li><input type="text" name="ingredient[]"></li>
+      <li><input type="text" name="ingredient[]"></li>
+      <li><input type="text" name="ingredient[]"></li>
+      <li><input type="text" name="ingredient[]"></li>
+      <li><input type="text" name="ingredient[]"></li>
+    </ul>
+  </p>
+
+  <p><input type="submit" /></p>
+</form>
